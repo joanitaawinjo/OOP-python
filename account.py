@@ -89,12 +89,13 @@ class Account:
 
 
   def set_minimum_balance(self, amount):
-    min_balance = 300
-    if self.balance - amount >= min_balance:
+    min_amount = 300
+    if self.balance - amount >= min_amount:
       self.balance -= amount
       return self.balance
     else:
-      return f"You cannot withdraw if your balance is less than {min_balance}."
+      return f"You cannot withdraw if your balance is less than {min_amount}."
+
 
   def close_account(self, account_id, accounts, transactions):
     for account in accounts:
@@ -104,10 +105,7 @@ class Account:
         return f"Account with ID {account_id} not found."
 
 
-
-
-
-
+  
 
 
 
