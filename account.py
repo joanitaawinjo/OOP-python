@@ -76,7 +76,7 @@ class Account:
 
 
   def interest_calculations(self, time):
-    return self.balance *0.05*time
+  return self.balance * 0.05 * time
 
 
   def unfreeze(self, is_freeze):
