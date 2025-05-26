@@ -75,8 +75,10 @@ class Account:
     print(f"Hello {self.name}, you have received {sum(self.deposits)} and your account balance is {self.balance}")
 
 
-  def interest_calculations(self, time):
-  return self.balance * 0.05 * time
+  def interest_calculations(self, principal, time):
+    rate = 0.05 
+    interest = principal * rate * time
+    return interest
 
 
   def unfreeze(self, is_freeze):
