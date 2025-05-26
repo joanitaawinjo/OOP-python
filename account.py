@@ -75,6 +75,17 @@ class Account:
     print(f"Hello {self.name}, you have received {sum(self.deposits)} and withdrawn {sum(self.withdrawals)}. Your account balance is {self.balance}")
 
 
+  def account_statement(self):
+    total_deposits = 0
+    total_withdrawals = 0
+    for deposit in self.deposits:
+      total_deposits + deposit
+    for withdrawal in self.withdrawals:
+      total_withdrawals += withdrawal
+      self.balance = total_deposits - total_withdrawals
+      print (f"Hello {self.name}, you have received {total_deposits} and withdrawn {total_withdrawals}. Your account balance is {self.balance}")
+
+
   def interest_calculations(self, principal, time):
     rate = 0.05 
     interest = principal * rate * time
